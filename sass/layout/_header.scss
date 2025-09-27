@@ -1,12 +1,12 @@
 .header {
     position: relative;
-    height: 80vh;
+    height: 40vh;
     background-image: linear-gradient(
             to left top,
             rgba($color-primary, 0.75),
             rgba($color-primary-light, 0.75)
-        ),
-        url(../img/spa-setting-with-lit-candle-fluffy-towels-fragrant-flowers-promotes-relaxation.jpg);
+        );
+        // url(../img/spa-setting-with-lit-candle-fluffy-towels-fragrant-flowers-promotes-relaxation.jpg);
 
     background-size: cover;
 

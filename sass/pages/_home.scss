@@ -8,7 +8,7 @@
 }
 
 .section-hr {
-    height: 40rem;
+    height: 30rem;
     display: flex;
     align-items: center;
 }
@@ -31,7 +31,7 @@
 
     &__img--2 {
         object-fit: cover;
-        top: 70%;
+        top: 90%;
         left: -30%;
         position: absolute;
         height: 40%;
@@ -48,25 +48,42 @@
     }
 }
 
-.section-offer {
-    padding-bottom: 20rem;
+.section-content {
+    @include gridLayout;
+
+    &__images {
+        position: relative;
+        height: 40rem;
+        grid-column: 4 / 7;
+    }
+
+    &__text-container {
+        grid-column: 3 / 12;
+    }
+
+    &__text {
+        @include text;
+    }
 }
 
 .footer {
     display: flex;
     position: relative;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 45rem;
     background-image: linear-gradient(
         to bottom,
         rgba($color-primary, 0.7),
         rgba($color-primary-light, 0.7)
     );
+    padding-top: 1rem;
 
     &__logo {
         transition: all 0.2s;
         border-radius: 100px;
-        margin-top: 10rem;
+        margin-top: 5rem;
         height: 20rem;
         width: 20rem;
         cursor: pointer;
@@ -82,12 +99,31 @@
         }
     }
 
+    &__insta {
+        transition: all 0.2s;
+        border-radius: 50px;
+        margin-top: 5rem;
+        height: 5rem;
+        width: 5rem;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 5px 5px 15px rgba($color-black, 0.5);
+        }
+
+        &:active {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    }
+
     &__copyright {
         @include text;
-        position: absolute;
-        bottom: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
+         position: absolute; 
+        bottom: 4rem; 
+        right: 2rem; 
+        text-align: right;
     }
 }
 

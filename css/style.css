@@ -55,6 +55,11 @@ body {
   background-color: #fffafa;
 }
 
+a:link {
+  color: #975026;
+  text-decoration: none;
+}
+
 body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -67,7 +72,7 @@ body {
 .heading-primary {
   position: relative;
   color: #fffafa;
-  font-family: "Great Vibes", cursive;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -247,8 +252,8 @@ body {
 
 .header {
   position: relative;
-  height: 80vh;
-  background-image: linear-gradient(to left top, rgba(136, 128, 85, 0.75), rgba(186, 180, 145, 0.75)), url(../img/spa-setting-with-lit-candle-fluffy-towels-fragrant-flowers-promotes-relaxation.jpg);
+  height: 40vh;
+  background-image: linear-gradient(to left top, rgba(136, 128, 85, 0.75), rgba(186, 180, 145, 0.75));
   background-size: cover;
 }
 .header__text-box {
@@ -313,7 +318,7 @@ body {
 }
 
 .section-hr {
-  height: 40rem;
+  height: 30rem;
   display: flex;
   align-items: center;
 }
@@ -335,7 +340,7 @@ body {
 }
 .section-about__img--2 {
   object-fit: cover;
-  top: 70%;
+  top: 90%;
   left: -30%;
   position: absolute;
   height: 40%;
@@ -351,21 +356,38 @@ body {
   opacity: 0.6;
 }
 
-.section-offer {
-  padding-bottom: 20rem;
+.section-content {
+  display: grid;
+  grid-template-columns: [full-start] repeat(2, 1fr) [center-start] repeat(9, [col-start] 1fr [col-end]) [center-end] repeat(2, 1fr) [full-end];
+}
+.section-content__images {
+  position: relative;
+  height: 40rem;
+  grid-column: 4/7;
+}
+.section-content__text-container {
+  grid-column: 3/12;
+}
+.section-content__text {
+  letter-spacing: 1.3px;
+  font-size: 2.1rem;
+  opacity: 0.6;
 }
 
 .footer {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 45rem;
   background-image: linear-gradient(to bottom, rgba(136, 128, 85, 0.7), rgba(186, 180, 145, 0.7));
+  padding-top: 1rem;
 }
 .footer__logo {
   transition: all 0.2s;
   border-radius: 100px;
-  margin-top: 10rem;
+  margin-top: 5rem;
   height: 20rem;
   width: 20rem;
   cursor: pointer;
@@ -378,14 +400,30 @@ body {
   transform: scale(1);
   box-shadow: none;
 }
+.footer__insta {
+  transition: all 0.2s;
+  border-radius: 50px;
+  margin-top: 5rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+.footer__insta:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.footer__insta:active {
+  transform: scale(1);
+  box-shadow: none;
+}
 .footer__copyright {
   letter-spacing: 1.3px;
   font-size: 2.1rem;
   opacity: 0.6;
   position: absolute;
   bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 2rem;
+  text-align: right;
 }
 
 .overlay {
